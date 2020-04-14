@@ -13,9 +13,8 @@ namespace Game
         {
             this.Catch();
             this.NoneOptinalOperations1();
-            this.Eat();
             this.Hook1();
-            this.NoneOptinalOperations2();
+            this.Eat();
             this.Sleep();
             this.Hook2();
         }
@@ -40,8 +39,6 @@ namespace Game
         // These operations have to be implemented in subclasses.
         protected abstract void NoneOptinalOperations1();
 
-        protected abstract void NoneOptinalOperations2();
-
         // These are "hooks." Subclasses may override them, but it's not
         // mandatory since the hooks already have default (but empty)
         // implementation.
@@ -60,12 +57,7 @@ namespace Game
             Console.WriteLine("Fried");
         }
 
-        protected override void NoneOptinalOperations2()
-        {
-            Console.WriteLine("Devoured");
-
-
-        }
+       
     }
 
     // Usually, concrete classes override only a fraction of base class'
@@ -77,14 +69,9 @@ namespace Game
             Console.WriteLine("Chat");
         }
 
-        protected override void NoneOptinalOperations2()
-        {
-            Console.WriteLine("Boil");
-        }
-
         protected override void Hook1()
         {
-            Console.WriteLine("Rest");
+            Console.WriteLine("Boil");
         }
     }
 
